@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .black-button {
+    background-color: black;
+    color: white;
+  }
+  
+  .red-button {
+    background-color: red;
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <button id="myButton" class="black-button" onclick="changeColor()">Нажми меня</button>
+
+  <script>
+    function changeColor() {
+      var button = document.getElementById("myButton");
+      if (button.classList.contains("black-button")) {
+        button.classList.remove("black-button");
+        button.classList.add("red-button");
+      } else {
+        button.classList.remove("red-button");
+        button.classList.add("black-button");
+      }
+    }
+  </script>
+</body>
+</html>
